@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Check, Sparkles, Zap, Crown } from "lucide-react"
+import { Check, Sparkles, Zap, Crown, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Navbar } from "@/components/custom/navbar"
@@ -20,7 +20,7 @@ export default function PlanosPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Comece gratuitamente e evolua conforme suas necessidades
+            Comece com 15 dias grátis e evolua conforme suas necessidades
           </p>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function PlanosPage() {
       {/* Planos */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Plano Grátis */}
             <Card className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-all">
               <CardHeader className="text-center pb-8 pt-8">
@@ -42,8 +42,8 @@ export default function PlanosPage() {
                   <span className="text-4xl font-bold text-gray-900">R$ 0</span>
                   <span className="text-gray-600">/mês</span>
                 </div>
-                <p className="text-gray-600">
-                  Perfeito para começar
+                <p className="text-gray-600 text-sm">
+                  15 dias de teste
                 </p>
               </CardHeader>
               <CardContent className="px-6 pb-8">
@@ -78,12 +78,6 @@ export default function PlanosPage() {
                     </div>
                     <span className="text-gray-500">Relatórios avançados</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-50">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-gray-400 text-xs">✕</span>
-                    </div>
-                    <span className="text-gray-500">Sugestões de refeições</span>
-                  </li>
                 </ul>
                 <Link href="/login" className="block">
                   <Button className="w-full" variant="outline" size="lg">
@@ -93,11 +87,11 @@ export default function PlanosPage() {
               </CardContent>
             </Card>
 
-            {/* Plano Mensal */}
+            {/* Plano Financeiro */}
             <Card className="border-2 border-blue-500 shadow-xl hover:shadow-2xl transition-all relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
-                  Mais Popular
+                  Popular
                 </span>
               </div>
               <CardHeader className="text-center pb-8 pt-12">
@@ -105,13 +99,13 @@ export default function PlanosPage() {
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Plano Mensal
+                  Plano Financeiro
                 </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">R$ 6,90</span>
+                  <span className="text-4xl font-bold text-gray-900">R$ 9,90</span>
                   <span className="text-gray-600">/mês</span>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm">
                   Acesso completo ao financeiro
                 </p>
               </CardHeader>
@@ -147,12 +141,6 @@ export default function PlanosPage() {
                     </div>
                     <span className="text-gray-700">Relatórios completos</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-50">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-gray-400 text-xs">✕</span>
-                    </div>
-                    <span className="text-gray-500">Módulo de saúde completo</span>
-                  </li>
                 </ul>
                 <Link href="/login" className="block">
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600" size="lg">
@@ -162,31 +150,25 @@ export default function PlanosPage() {
               </CardContent>
             </Card>
 
-            {/* Plano Completo */}
-            <Card className="border-2 border-green-500 shadow-lg hover:shadow-xl transition-all">
+            {/* Plano Saúde */}
+            <Card className="border-2 border-green-400 shadow-lg hover:shadow-xl transition-all">
               <CardHeader className="text-center pb-8 pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Crown className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Plano Completo
+                  Plano Saúde
                 </h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-gray-900">R$ 9,90</span>
                   <span className="text-gray-600">/mês</span>
                 </div>
-                <p className="text-gray-600">
-                  Financeiro + Saúde completo
+                <p className="text-gray-600 text-sm">
+                  Acesso completo à saúde
                 </p>
               </CardHeader>
               <CardContent className="px-6 pb-8">
                 <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-green-600" />
-                    </div>
-                    <span className="text-gray-700 font-medium">Tudo do Plano Mensal +</span>
-                  </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 text-green-600" />
@@ -209,17 +191,80 @@ export default function PlanosPage() {
                     <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 text-green-600" />
                     </div>
-                    <span className="text-gray-700">Gráficos avançados de evolução</span>
+                    <span className="text-gray-700">Gráficos de evolução</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 text-green-600" />
                     </div>
-                    <span className="text-gray-700">Suporte prioritário</span>
+                    <span className="text-gray-700">Cálculo nutricional avançado</span>
                   </li>
                 </ul>
                 <Link href="/login" className="block">
-                  <Button className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600" size="lg">
+                  <Button className="w-full bg-gradient-to-r from-green-500 to-green-400 hover:from-green-600 hover:to-green-500" size="lg">
+                    Assinar agora
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Plano Completo */}
+            <Card className="border-2 border-purple-500 shadow-xl hover:shadow-2xl transition-all relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
+                  Melhor Valor
+                </span>
+              </div>
+              <CardHeader className="text-center pb-8 pt-12">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Crown className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Plano Completo
+                </h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-gray-900">R$ 14,90</span>
+                  <span className="text-gray-600">/mês</span>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Financeiro + Saúde completo
+                </p>
+              </CardHeader>
+              <CardContent className="px-6 pb-8">
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-purple-600" />
+                    </div>
+                    <span className="text-gray-700 font-medium">Tudo dos planos anteriores +</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-purple-600" />
+                    </div>
+                    <span className="text-gray-700">Acesso total: Financeiro + Saúde</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-purple-600" />
+                    </div>
+                    <span className="text-gray-700">Relatórios integrados</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-purple-600" />
+                    </div>
+                    <span className="text-gray-700">Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-purple-600" />
+                    </div>
+                    <span className="text-gray-700">Economia de R$ 4,90/mês</span>
+                  </li>
+                </ul>
+                <Link href="/login" className="block">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600" size="lg">
                     Assinar agora
                   </Button>
                 </Link>
@@ -251,8 +296,8 @@ export default function PlanosPage() {
                     Como funciona o período de teste?
                   </h3>
                   <p className="text-gray-600">
-                    O Plano Grátis não tem limite de tempo. Você pode usar indefinidamente 
-                    e fazer upgrade quando quiser para desbloquear mais funcionalidades.
+                    O Plano Grátis oferece 15 dias de teste com funcionalidades limitadas. 
+                    Você pode fazer upgrade a qualquer momento para desbloquear mais recursos.
                   </p>
                 </CardContent>
               </Card>
@@ -272,11 +317,11 @@ export default function PlanosPage() {
               <Card className="border border-gray-200">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Meus dados ficam salvos se eu cancelar?
+                    Qual a diferença entre os planos Financeiro e Saúde?
                   </h3>
                   <p className="text-gray-600">
-                    Sim! Seus dados ficam salvos por 90 dias após o cancelamento. Se você 
-                    reativar nesse período, tudo estará lá esperando por você.
+                    O Plano Financeiro foca em gestão de gastos e metas financeiras. O Plano Saúde 
+                    oferece controle de dieta, calorias e peso. O Plano Completo inclui ambos com desconto!
                   </p>
                 </CardContent>
               </Card>
